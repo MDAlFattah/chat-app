@@ -1,0 +1,138 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+.chat-container {
+    max-width: 800px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* Heading styles */
+.existing-chats, .topics-heading, .new-chat-topic {
+    margin-top: 0;
+}
+
+.topics-heading, .new-chat-topic {
+    margin-bottom: 10px;
+}
+
+/* Input styles */
+.new-chat-input {
+    margin-bottom: 20px;
+}
+
+#new-chat-topic-input {
+    width: 70%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Topics list styles */
+.topics-list {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.topics-list a {
+    display: block;
+    padding: 10px 0;
+    color: #333;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.topics-list a:hover {
+    background-color: #f0f0f0;
+}
+
+/* Styles for topic name */
+.topic-name {
+    font-size: 24px;
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+/* Styles for messages */
+.messages-heading {
+    font-size: 20px;
+    color: #333;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.messages-container table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.messages-container th {
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #f0f0f0;
+    text-align: left;
+}
+
+.messages-container td {
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #ffffff;
+}
+
+/* Styles for chat form */
+.chat-form {
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.chat-form input[type="text"],
+.chat-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.chat-form button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
