@@ -23,7 +23,7 @@ kind: Service
 metadata:
   name: chat-app-web
 spec:
-  type: NodePort
+  type: LoadBalancer
   selector:
     app: chat-app-web
   ports:
