@@ -1,0 +1,47 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: chat-app-mysql
+  namespace: production
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: chat-app-mysql
+  template:
+    metadata:
+      labels:
+        app: chat-app-mysql
+    spec:
+      containers:
+      - name: chat-app-mysql
+        image: mysql:5.7
+        env:
+        - name: MYSQL_ROOT_PASSWORD
+          value: rootpassword
+        - name: MYSQL_DATABASE
+          value: chatapp
+        - name: MYSQL_USER
+          value: chatuser
+        - name: MYSQL_PASSWORD
+          value: chatpassword
+        ports:
+        - containerPort: 3306
+        volumeMounts:
+        - name: mysql-storage
+          mountPath: /var/lib/mysql
+      volumes:
+      - name: mysql-storage
+        persistentVolumeClaim:
+          claimName: mysql-pv-claim
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: chat-app-mysql
+  namespace: production
+spec:
+  ports:
+    - port: 3306
+  selector:
+    app: chat-app-mysql

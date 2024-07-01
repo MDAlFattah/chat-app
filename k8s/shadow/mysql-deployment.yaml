@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: chat-app-mysql
+  namespace: shadow
 spec:
   replicas: 1
   selector:
@@ -32,12 +33,13 @@ spec:
       volumes:
       - name: mysql-storage
         persistentVolumeClaim:
-          claimName: mysql-pv-claim
+          claimName: mysql-pv-claim-shadow
 ---
 apiVersion: v1
 kind: Service
 metadata:
   name: chat-app-mysql
+  namespace: shadow
 spec:
   ports:
     - port: 3306
