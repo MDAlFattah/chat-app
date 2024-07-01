@@ -1,6 +1,6 @@
 <?php
 // Database configuration
-$dbHost = 'mysql'; // Hostname or IP address of the MySQL server (service name in Docker Compose)
+$dbHost = 'chat-app-mysql'; // Hostname or IP address of the MySQL server (service name in Docker Compose)
 $dbUsername = 'chatuser'; // MySQL username
 $dbPassword = 'chatpassword'; // MySQL password
 $dbName = 'chatapp'; // Name of the database
